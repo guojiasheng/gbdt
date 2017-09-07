@@ -25,5 +25,10 @@ gdbt implement by scikit-learn
 	2.对文件进行predict
 	    当我们有测试文件 test 和 训练文化train的时候，我们用train训练model，用这个model来预测test的文件，输出文件为当前目录下的predict文件。
 	    python gbdt.py -p testFile trainFile
-                                
+      
+      
+ # gbdt+Logistic 模型
+implement by scikit-learn
+说明：利用GBDT模型构造新特征，比如使用N个树，n_estimators=n，对于一个输入样本点x，如果它在第一棵树最后落在其中的第二个叶子结点，而在第二棵树里最后落在其中的第一个叶子结点。那么通过GBDT获得的新特征向量为[0, 1, 0, 1, 0]，其中向量中的前三位对应第一棵树的3个叶子结点，后两位对应第二棵树的2个叶子结点。然后把这些构造的新特征做完LR的输入特征
+python gbdt_lr.py
 
